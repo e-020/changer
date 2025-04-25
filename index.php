@@ -6,7 +6,7 @@ $count = 1;
 foreach ($files as $file) {
     $filePath = $folder . $file;
 
-    // تأكد أنه ملف وليس مجلد، وأنه صورة
+    // This Folder or image
     if (is_file($filePath) && preg_match('/\.(jpg|jpeg|png|gif)$/i', $file)) {
         $ext = pathinfo($file, PATHINFO_EXTENSION);
         $newName = 'pic_' . $count . '.' . $ext;
